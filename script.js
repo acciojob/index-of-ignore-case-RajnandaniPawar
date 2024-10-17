@@ -1,14 +1,18 @@
-function indexOfIgnoreCase(s1, s2) {
-  // write your code here
-	  lower_str = str.lower()
-    lower_subStr = subStr.lower()
+function indexOfIgnoreCase(str, subStr) {
+    // Handle edge case: if subStr is an empty string, return 0 (standard behavior)
+    if (subStr === "") {
+        return 0;
+    }
 
-    // # Use the built-in find method which returns the index of the first occurrence
-    index = lower_str.find(lower_subStr)
+    // Convert both the input string and substring to lowercase to ignore case
+    let lowerStr = str.toLowerCase();
+    let lowerSubStr = subStr.toLowerCase();
 
-    // # Return the index (or -1 if not found)
-    return index
+    // Use the indexOf method to find the first occurrence of the substring
+    let index = lowerStr.indexOf(lowerSubStr);
 
+    // Return the index (or -1 if not found)
+    return index;
 }
 
 // Please do not change the code below
